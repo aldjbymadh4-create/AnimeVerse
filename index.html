@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#070b20">
+  <meta name="description" content="AnimeVerse - عالم الأنمي">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <title>AnimeVerse | عالم الأنمي</title>
+</head>
+<body>
+  <div id="installBar" class="install-bar hidden">
+    <span>📲 تقدر تثبّت AnimeVerse على جهازك</span>
+    <button id="installBtn">تثبيت</button>
+    <button id="closeInstall" class="ghost">×</button>
+  </div>
+
+  <header class="topbar">
+    <div class="brand" data-page="home">
+      <img src="assets/logo.png" alt="AnimeVerse">
+      <div><b>AnimeVerse</b><small>عالم الأنمي</small></div>
+    </div>
+    <div class="search">
+      <span>⌕</span>
+      <input id="searchInput" placeholder="ابحث عن أنمي، شخصية، أو مجتمع...">
+    </div>
+    <div class="top-actions">
+      <button title="الإشعارات" data-page="notifications">🔔</button>
+      <button title="الرسائل" data-page="chat">💬</button>
+      <button title="الملف الشخصي" data-page="profile">👤</button>
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <nav>
+      <button class="nav active" data-page="home">⌂ <span>الرئيسية</span></button>
+      <button class="nav" data-page="anime">◈ <span>الأنمي</span></button>
+      <button class="nav" data-page="community">♧ <span>المجتمع</span></button>
+      <button class="nav" data-page="guilds">♛ <span>النقابات</span></button>
+      <button class="nav" data-page="events">✦ <span>الفعاليات</span></button>
+      <button class="nav" data-page="chat">▣ <span>الدردشة</span></button>
+      <button class="nav" data-page="ranking">🏆 <span>الترتيب</span></button>
+      <button class="nav" data-page="shop">◇ <span>المتجر</span></button>
+      <button class="nav" data-page="profile">◉ <span>ملفي</span></button>
+      <button class="nav" data-page="settings">⚙ <span>الإعدادات</span></button>
+    </nav>
+    <div class="side-card">
+      <b>AnimeVerse</b>
+      <p>عالم يجمع الأنمي والمجتمع والفعاليات في مكان واحد.</p>
+    </div>
+  </aside>
+
+  <main id="app">
+    <section class="page" id="home">
+      <div class="hero">
+        <div>
+          <span class="pill">🔥 الموسم الحالي</span>
+          <h1>عالم الأنمي يبدأ من هنا</h1>
+          <p>شاهد، اكتشف، شارك، وانضم إلى مجتمع الأنمي.</p>
+          <div class="actions">
+            <button class="primary" data-page="anime">استكشف الأنمي</button>
+            <button class="secondary" data-page="community">ادخل المجتمع</button>
+          </div>
+        </div>
+        <img src="assets/logo.png" alt="">
+      </div>
+
+      <div class="section-head"><h2>أقسام AnimeVerse</h2><span>كل شيء في مكان واحد</span></div>
+      <div class="grid cards">
+        <article class="card" data-page="anime"><div class="icon">🎬</div><h3>مشاهدة الأنمي</h3><p>صفحات الأنمي والحلقات والمفضلة.</p></article>
+        <article class="card" data-page="community"><div class="icon">👥</div><h3>مجتمع الأنمي</h3><p>منشورات ونقاشات وتفاعل مع الأعضاء.</p></article>
+        <article class="card" data-page="guilds"><div class="icon">♛</div><h3>النقابات</h3><p>أنشئ نقابة وانضم للمنافسات.</p></article>
+        <article class="card" data-page="events"><div class="icon">⚔️</div><h3>الفعاليات والتحديات</h3><p>فعاليات ونقاط وترتيبات ومكافآت.</p></article>
+      </div>
+
+      <div class="section-head"><h2>الأكثر شعبية</h2><span>هذا الأسبوع</span></div>
+      <div class="grid anime-grid">
+        <article class="anime-card"><div class="poster p1">ONE<br>PIECE</div><b>One Piece</b><small>حلقة جديدة • 9.8 ⭐</small></article>
+        <article class="anime-card"><div class="poster p2">NARUTO</div><b>Naruto</b><small>مكتمل • 9.2 ⭐</small></article>
+        <article class="anime-card"><div class="poster p3">DEMON<br>SLAYER</div><b>Demon Slayer</b><small>موسم جديد • 9.4 ⭐</small></article>
+        <article class="anime-card"><div class="poster p4">JUJUTSU</div><b>Jujutsu Kaisen</b><small>شائع الآن • 9.5 ⭐</small></article>
+      </div>
+    </section>
+
+    <section class="page hidden" id="anime"><div class="section-head"><h1>الأنمي</h1><span>اكتشف عناوينك المفضلة</span></div><div class="toolbar"><button class="chip active">الكل</button><button class="chip">الأكثر مشاهدة</button><button class="chip">الجديد</button><button class="chip">المفضلة</button></div><div class="grid anime-grid large"></div></section>
+
+    <section class="page hidden" id="community"><div class="section-head"><h1>المجتمع</h1><span>شارك رأيك مع محبي الأنمي</span></div><div class="post"><b>👤 AnimeFan</b><p>ما أفضل أنمي شاهدته هذه الفترة؟</p><div class="post-actions">❤️ 1.2K &nbsp; 💬 456 &nbsp; ↗ مشاركة</div></div><div class="post"><b>👤 Luffy_Fan</b><p>تحدي اليوم: خمن الشخصية من الصورة 🎭</p><div class="post-actions">❤️ 982 &nbsp; 💬 320 &nbsp; ↗ مشاركة</div></div></section>
+
+    <section class="page hidden" id="guilds"><div class="section-head"><h1>النقابات</h1><span>كوّن فريقك ونافس عالميًا</span></div><div class="grid cards"><article class="card"><div class="badge">♛</div><h3>Anime Kings</h3><p>12.4K عضو • مستوى 12</p><button class="primary">عرض النقابة</button></article><article class="card"><div class="badge">⚡</div><h3>Shadow Legion</h3><p>9.8K عضو • مستوى 10</p><button class="primary">عرض النقابة</button></article><article class="card"><div class="badge">🔥</div><h3>Akatsuki</h3><p>8.6K عضو • مستوى 9</p><button class="primary">عرض النقابة</button></article></div></section>
+
+    <section class="page hidden" id="events"><div class="section-head"><h1>الفعاليات</h1><span>تحديات ومنافسات ومكافآت</span></div><div class="event"><div><b>🏆 بطولة الأنمي العالمية</b><p>اختبر معلوماتك واربح النقاط.</p></div><button class="primary">دخول</button></div><div class="event"><div><b>⚔️ تحدي الشخصية</b><p>خمن الشخصية قبل انتهاء الوقت.</p></div><button class="primary">دخول</button></div></section>
+
+    <section class="page hidden" id="chat"><div class="section-head"><h1>الدردشة</h1><span>محادثاتك الخاصة</span></div><div class="chat-box"><div class="messages"><div class="bubble other">السلام عليكم 👋</div><div class="bubble me">وعليكم السلام! 🔥</div></div><div class="composer"><input placeholder="اكتب رسالة..."><button class="primary">إرسال</button></div></div></section>
+
+    <section class="page hidden" id="ranking"><div class="section-head"><h1>الترتيب</h1><span>أفضل الأعضاء والنقابات</span></div><div class="ranking"><div>🥇 <b>Anime Kings</b><span>1.2M</span></div><div>🥈 <b>Shadow Legion</b><span>980K</span></div><div>🥉 <b>Akatsuki</b><span>860K</span></div><div>4️⃣ <b>Straw Hat Crew</b><span>720K</span></div></div></section>
+
+    <section class="page hidden" id="shop"><div class="section-head"><h1>المتجر</h1><span>عناصر وميزات داخلية</span></div><div class="grid cards"><article class="card"><div class="icon">👑</div><h3>لقب أسطوري</h3><b>5,000 🪙</b><button class="primary">شراء</button></article><article class="card"><div class="icon">🛡️</div><h3>شارة مميزة</h3><b>3,000 🪙</b><button class="primary">شراء</button></article></div></section>
+
+    <section class="page hidden" id="profile"><div class="profile-head"><div class="avatar">م</div><div><h1>معاذ</h1><p>@moaz • عضو AnimeVerse</p></div><button class="primary">تعديل الملف</button></div><div class="grid cards"><article class="card"><h3>النقاط</h3><b class="big">3,450</b></article><article class="card"><h3>المتابعون</h3><b class="big">1,280</b></article><article class="card"><h3>النقابة</h3><b>Anime Kings</b></article></div></section>
+
+    <section class="page hidden" id="notifications"><div class="section-head"><h1>الإشعارات</h1></div><div class="post">🔔 تمت دعوتك إلى نقابة Anime Kings</div><div class="post">🏆 بدأت فعالية جديدة الآن</div></section>
+
+    <section class="page hidden" id="settings"><div class="section-head"><h1>الإعدادات</h1><span>تحكم في حسابك وتفضيلاتك</span></div><div class="settings"><button>🌐 اللغة <span>العربية ›</span></button><button>👤 الحساب <span>›</span></button><button>🔒 الخصوصية <span>›</span></button><button>🛡 الأمان <span>›</span></button><button>🔔 الإشعارات <span>›</span></button><button>❓ المساعدة والدعم <span>›</span></button><button class="danger">↪ تسجيل الخروج</button></div></section>
+  </main>
+
+  <nav class="mobile-nav">
+    <button data-page="home">⌂<small>الرئيسية</small></button>
+    <button data-page="anime">◈<small>الأنمي</small></button>
+    <button data-page="community">♧<small>المجتمع</small></button>
+    <button data-page="guilds">♛<small>النقابات</small></button>
+    <button data-page="profile">◉<small>ملفي</small></button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
